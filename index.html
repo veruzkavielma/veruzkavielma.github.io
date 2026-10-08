@@ -1,3 +1,331 @@
-<h1>Este es un sitio web con Github Pages</h1>
-<p>Y fue creado con amor para el Curso de Git y Github de Platzi</p>
-<p><img src="https://www.bunko.pet/__export/1611884288964/sites/debate/img/2021/01/28/10_cosas_que_solo_el_duexo_de_un_golden_retriever_conoce.jpeg_1673421859.jpeg" /></p>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veruzka Vielma | QA Engineer - Manual & Automation Testing</title>
+    <meta name="description" content="Portfolio of Veruzka Vielma - QA Engineer specializing in Manual & Automation Testing, TestNG, Selenium, Page Object Model, and API QA.">
+    <meta name="keywords" content="Veruzka Vielma, QA Engineer, QA Analyst, Automation Tester, Manual Testing, Selenium, Selenium WebDriver, TestNG, Java, Playwright, REST API Testing, Postman, SQL, SAP Business One, Batchmaster, IoT, OEE, SDET Portfolio">
+
+    <script src="scripts/tailwind.config.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-darkbg text-gray-200 font-sans antialiased relative min-h-screen selection:bg-purple-500 selection:text-white overflow-x-hidden">
+
+    <!-- SCROLL PROGRESS -->
+    <div id="scrollProgress"></div>
+
+    <!-- CURSOR GLOW -->
+    <div id="cursorGlow"></div>
+
+    <!-- FLOATING PARTICLES -->
+    <div class="particle" style="left:5%;animation-duration:13s;"></div>
+    <div class="particle" style="left:15%;animation-duration:17s;animation-delay:2s;"></div>
+    <div class="particle" style="left:25%;animation-duration:14s;animation-delay:4s;"></div>
+    <div class="particle" style="left:40%;animation-duration:19s;animation-delay:1s;"></div>
+    <div class="particle" style="left:55%;animation-duration:15s;animation-delay:3s;"></div>
+    <div class="particle" style="left:70%;animation-duration:18s;animation-delay:5s;"></div>
+    <div class="particle" style="left:85%;animation-duration:16s;animation-delay:2s;"></div>
+    <div class="particle" style="left:95%;animation-duration:20s;animation-delay:6s;"></div>
+
+    <!-- AMBIENT GLOWS -->
+    <div class="blur-glow bg-purple-500 w-96 h-96 top-10 left-10 animate-float"></div>
+    <div class="blur-glow bg-fuchsia-600 w-96 h-96 top-[30rem] right-10 animate-float-reverse"></div>
+    <div class="blur-glow bg-fuchsia-600 w-80 h-80 bottom-32 left-1/4 animate-float"></div>
+
+    <!-- TOP HEADER -->
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 w-full z-50 bg-darkbg/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-2 relative">
+            <a href="#" class="text-base md:text-xl font-bold tracking-tight text-white flex items-center gap-2.5 group shrink-0">
+                <span class="group-hover:text-purple-300 transition-colors whitespace-nowrap text-sm sm:text-base md:text-xl">
+                    <span class="text-purple-400">&lt;</span>
+                    <span>Veruzka Vielma</span>
+                    <span class="text-gray-400 font-normal"> | QA</span>
+                    <span class="text-purple-400">&gt;</span>
+                </span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-purple-400 transition-all duration-200 hover:-translate-y-0.5">About</a>
+                <a href="#skills" class="hover:text-purple-400 transition-all duration-200 hover:-translate-y-0.5">Skills</a>
+                <a href="#projects" class="hover:text-purple-400 transition-all duration-200 hover:-translate-y-0.5">Experience</a>
+                <a href="mailto:veruzkavielma.vv@gmail.com" class="hover:text-purple-400 transition-all duration-200 hover:-translate-y-0.5">Email</a>
+            </nav>
+
+            <!-- Action Area (Hire Me + Mobile Menu Toggle) -->
+            <div class="relative flex items-center gap-2">
+                <a href="mailto:veruzkavielma.vv@gmail.com" class="shine-btn inline-flex items-center gap-1.5 bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all duration-300 shadow-lg shadow-purple-600/20 hover:shadow-purple-600/40 hover:scale-105 active:scale-95">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Hire Me</span>
+                </a>
+
+                <!-- Hamburger Button (Mobile Only) -->
+                <button id="mobileMenuToggle" aria-label="Toggle navigation menu" class="md:hidden w-8 h-8 rounded-lg bg-cardbg border border-gray-700 flex items-center justify-center text-purple-400 hover:text-white hover:border-purple-500 transition-all">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-sm"></i>
+                </button>
+
+                <!-- MOBILE DROPDOWN MENU -->
+                <nav id="mobileMenu" class="hidden md:hidden absolute right-0 top-12 w-48 bg-cardbg/95 backdrop-blur-xl border border-gray-800 rounded-2xl shadow-2xl p-2 z-50 animate-fadeIn">
+                    <a href="#about" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-800/80 rounded-xl transition-all">
+                        <i class="fa-solid fa-user text-purple-400 w-4 text-center"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#skills" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-800/80 rounded-xl transition-all">
+                        <i class="fa-solid fa-list-check text-purple-400 w-4 text-center"></i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#projects" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-800/80 rounded-xl transition-all">
+                        <i class="fa-solid fa-folder-open text-purple-400 w-4 text-center"></i>
+                        <span>Experience</span>
+                    </a>
+                    <a href="mailto:veruzkavielma.vv@gmail.com" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-800/80 rounded-xl transition-all">
+                        <i class="fa-solid fa-paper-plane text-purple-400 w-4 text-center"></i>
+                        <span>Email</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-20 md:pt-24">
+
+        <!-- HERO / ABOUT -->
+        <section id="about" class="scroll-mt-24 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12 border-b border-gray-800">
+            <div class="flex-1 space-y-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/50 text-purple-400 text-xs font-medium shadow-inner animate-pulse-slow">
+                    <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
+                    Open for QA Roles
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                    Hi, I'm Veruzka Vielma <br class="hidden sm:inline" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-purple-300" id="typing-text">into Manual Testing</span>
+                    <span class="typing-cursor"></span>
+                </h1>
+
+                <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
+                    QA with 4+ years of experience in functional testing and quality assurance for web applications and enterprise systems. Experienced in manufacturing workflows with SAP Business One and Batchmaster, IoT integrations, OEE monitoring, REST API testing with Postman, and SQL data validation. High school graduate in Sciences with certified Quality Assurance Tester; currently strengthening automation skills in Selenium WebDriver, Java, and Playwright.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="mailto:veruzkavielma.vv@gmail.com" class="shine-btn inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-lg shadow-purple-600/25 hover:shadow-purple-500/40 hover:-translate-y-1 active:translate-y-0">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="w-5 h-5 shrink-0">
+                            <path fill="#EA4335" d="M3 6.7c0-1.1 1.3-1.7 2.2-1L12 10.8l6.8-5.1c.9-.7 2.2-.1 2.2 1v2L12 15.5 3 8.7v-2z"/>
+                            <path fill="#FBBC04" d="M3 8.7 6 11v7.5H4.5c-.8 0-1.5-.7-1.5-1.5V8.7z"/>
+                            <path fill="#4285F4" d="m21 8.7-3 2.3v7.5h1.5c.8 0 1.5-.7 1.5-1.5V8.7z"/>
+                            <path fill="#34A853" d="M6 11 12 15.5 18 11v7.5H6V11z"/>
+                        </svg> Contact Me
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/veruzka-vielma-899b66186" target="_blank" rel="noopener noreferrer" class="shine-btn inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white font-medium px-6 py-3 rounded-lg border border-gray-700 hover:border-purple-500/40 transition-all duration-200 hover:-translate-y-1">
+                        <i class="fa-brands fa-linkedin text-purple-400"></i> LinkedIn
+                    </a>
+
+                    <!-- GITHUB -->
+                    <a href="https://github.com/veruzkavielma"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="shine-btn inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white font-medium px-6 py-3 rounded-lg border border-gray-700 hover:border-purple-500/40 transition-all duration-200 hover:-translate-y-1">
+                        <i class="fa-brands fa-github text-purple-400"></i>
+                        GitHub
+                    </a>
+
+                </div>
+
+                <div class="flex flex-wrap items-center gap-6 pt-6 text-sm text-gray-400 border-t border-gray-800/80">
+                    <div class="flex items-center gap-2 hover:text-gray-200 transition-colors">
+                        <i class="fa-solid fa-briefcase text-purple-400"></i> QA Analyst | QA Automation | Selenium | Playwright with AI | REST API Testing | SQL
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFILE -->
+            <div class="relative flex-shrink-0 profile-float" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-3xl bg-gradient-to-b from-purple-400 via-fuchsia-300 to-purple-300 p-[3px] shadow-[0_0_40px_rgba(192,132,252,0.35)] transition-all duration-500 hover:shadow-[0_0_55px_rgba(240,171,252,0.5)] hover:scale-105">
+                    <div class="w-full h-full rounded-[21px] overflow-hidden relative bg-cardbg group">
+                        <img src="images/profile.png?v=2" alt="Veruzka Vielma" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute bottom-3 left-3 right-3 bg-darkbg/85 backdrop-blur-md border border-gray-700/60 rounded-xl px-4 py-2 text-center transition-transform duration-300 group-hover:-translate-y-1">
+                            <p class="text-white font-bold text-sm tracking-wide">QA Engineer</p>
+                            <p class="text-xs font-medium text-purple-400">Manual + Automation Testing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="scroll-mt-24 py-20 border-b border-gray-800">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="section-heading text-3xl font-bold text-white tracking-tight">Core Competencies</h2>
+                <p class="text-gray-400 mt-2">Experience in manual testing, functional quality assurance, API validation, and automation training.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- MANUAL -->
+                <div class="bg-cardbg p-8 rounded-xl border border-gray-800 hover-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-purple-400 font-bold text-xl mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-list-check text-2xl"></i> Manual Testing
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Test Case Design</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Test Case Execution</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Functional Testing</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Non-Functional Testing</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Smoke & Sanity Testing</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Regression Testing</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Integration Testing</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">End-to-End Testing</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">UAT</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Defect Reporting</span>
+                    </div>
+                </div>
+
+                <!-- AUTOMATION -->
+                <div class="bg-cardbg p-8 rounded-xl border border-gray-800 hover-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-purple-400 font-bold text-xl mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-robot text-2xl"></i> Automation Testing
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Automation Frameworks</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Automated Test Execution</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Page Object Model</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Data-Driven Testing</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Custom Locators & XPath</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Cross-Browser Testing</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Automated Regression Suites</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Test Script Maintenance</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Selenium WebDriver</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Java & TestNG</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">Playwright with AI</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">REST API Testing & Postman</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">BDD, Gherkin & Cucumber</span>
+                        <span class="skill-badge bg-gray-800/80 border border-gray-700 px-3 py-2 rounded-lg text-xs font-medium text-gray-200">SQL & MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="projects" class="scroll-mt-24 py-20 border-b border-gray-800">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <p class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2">CAREER HISTORY</p>
+                <h2 class="section-heading text-3xl font-bold text-white tracking-tight">Professional Experience</h2>
+            </div>
+
+            <div class="space-y-8">
+                <article class="bg-cardbg border border-gray-800 rounded-xl p-8 hover-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 border-b border-gray-800 pb-5 mb-5">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">QA Analyst</h3>
+                            <p class="text-purple-300 font-medium mt-1">eWorkplace Apps</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-5">Quality assurance for manufacturing operations management (MOM) workflows integrated with SAP Business One and Batchmaster.</p>
+                    <ul class="grid md:grid-cols-2 gap-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Validated production workflows, IoT device integrations, and OEE monitoring.</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Designed and executed functional test cases for integrated manufacturing processes and web interfaces.</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Traced functional requirements to test cases and documented test evidence.</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Managed defect lifecycles and collaborated with development, product, and business teams in Agile ceremonies.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="bg-gray-800/80 border border-gray-700 text-xs px-3 py-1 rounded-lg text-gray-300">SAP Business One</span>
+                        <span class="bg-gray-800/80 border border-gray-700 text-xs px-3 py-1 rounded-lg text-gray-300">Batchmaster / MOM</span>
+                        <span class="bg-gray-800/80 border border-gray-700 text-xs px-3 py-1 rounded-lg text-gray-300">IoT & OEE</span>
+                        <span class="bg-gray-800/80 border border-gray-700 text-xs px-3 py-1 rounded-lg text-gray-300">Jira · ClickUp · Zoho CRM</span>
+                    </div>
+                </article>
+
+                <article class="bg-cardbg border border-gray-800 rounded-xl p-8 hover-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 border-b border-gray-800 pb-5 mb-5">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">QA Trainee · QA Bootcamp</h3>
+                            <p class="text-purple-300 font-medium mt-1">UPEX</p>
+                        </div>
+                        <span class="text-sm text-gray-400">June 2022 – February 2023</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-5">Practical training in functional and API testing, Agile methods, and quality documentation.</p>
+                    <ul class="grid md:grid-cols-2 gap-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Analyzed user stories and acceptance criteria; designed BDD scenarios with Gherkin.</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Tested web applications and REST APIs with Postman and validated data with SQL.</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Managed test cases, evidence, and defects with Jira, Xray, and Confluence.</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Prepared quality reports and performed root cause analysis.</li>
+                    </ul>
+                </article>
+
+                <article class="bg-cardbg border border-gray-800 rounded-xl p-8 hover-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 border-b border-gray-800 pb-5 mb-5">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">QA Manual</h3>
+                            <p class="text-purple-300 font-medium mt-1">Xpectra</p>
+                        </div>
+                    </div>
+                    <ul class="grid md:grid-cols-2 gap-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Created and executed test cases for web and mobile applications; prepared functional documentation and evidence.</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Validated data integrity with SQL and reported and tracked defects in Jira.</li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-purple-400 mt-1"></i> Contributed to quality assurance activities throughout the software development life cycle (SDLC).</li>
+                    </ul>
+                </article>
+
+                <div class="bg-cardbg/70 border border-gray-800 rounded-xl p-6" data-aos="fade-up">
+                    <h3 class="text-lg font-bold text-white mb-3">Education & Certifications</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">High School Diploma in Sciences, Unidad Educativa Santa Sofía (2015) · QA Testing Diploma, ICARO (2026) · AI Automation with Playwright, Instituto Web (2026) · ISTQB Foundation Level preparation (self-study)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 py-8 bg-darkbg">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+            <p>© 2026 Veruzka Vielma. All rights reserved.</p>
+
+            <div class="flex items-center space-x-6">
+                <a href="mailto:veruzkavielma.vv@gmail.com" class="hover:text-purple-400 flex items-center gap-2 transition-all hover:-translate-y-0.5">
+                    <i class="fa-regular fa-envelope text-purple-400 text-sm"></i> Email
+                </a>
+                <a href="https://www.linkedin.com/in/veruzka-vielma-899b66186" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 flex items-center gap-2 transition-all hover:-translate-y-0.5">
+                    <i class="fa-brands fa-linkedin text-purple-400 text-sm"></i> LinkedIn
+                </a>
+
+                <!-- GITHUB FOOTER LINK -->
+                <a href="https://github.com/veruzkavielma"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover:text-purple-400 flex items-center gap-2 transition-all hover:-translate-y-0.5">
+                    <i class="fa-brands fa-github text-purple-400 text-sm"></i>
+                    GitHub
+                </a>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+
+
+
